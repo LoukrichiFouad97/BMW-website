@@ -7,10 +7,15 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
+html {
+  box-sizing: border-box;
+}
 body {
   font: {
     family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   };
-}
 
+}
+*,*::after,*::before {
+  box-sizing: inherit;
+}

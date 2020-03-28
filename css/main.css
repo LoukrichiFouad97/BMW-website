@@ -9,8 +9,16 @@ a {
   color: inherit;
 }
 
+html {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
 }
 
 .btn {
@@ -200,4 +208,38 @@ body {
 }
 .info .container .info-1 h3 {
   margin: 0;
+}
+.info .container .info-1 p {
+  line-height: 1.4;
+}
+
+.about .container .row {
+  display: flex;
+  color: #fff;
+  height: 500px;
+}
+.about .container .row-info {
+  flex-basis: 50%;
+  background: linear-gradient(to left, #06091a, #08122b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #000;
+}
+.about .container .row-info h2 {
+  margin: 0;
+}
+.about .container .row-info p {
+  line-height: 1.6;
+  width: 80%;
+}
+.about .container .row-img {
+  flex-basis: 50%;
+}
+.about .container .row-img img {
+  width: 100%;
+  height: 100%;
 }

@@ -1,0 +1,16 @@
+// flexbox display
+@mixin flex($flex, $justify, $align: "") {
+	display: $flex;
+	justify-content: $justify;
+	align-items: unquote($align);
+}
+
+// prefixer
+@mixin prefixer($prop, $val, $vendors) {
+	@each $vendor in $vendors {
+		#{'-' + $vendor + '-' + $prop}: $val;
+	}
+	$prop: $val;
+}
+
+

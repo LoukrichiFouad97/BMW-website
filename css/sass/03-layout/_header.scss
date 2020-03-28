@@ -1,0 +1,137 @@
+.header {
+	height: 100vh;
+	width: 100%;
+	background: url("../../../images/showcase.jpg") no-repeat center center/cover;
+	color: #fff;
+	display: flex;
+	flex-flow: column wrap;
+	// Header Navbar
+	&__nav {
+		background-color: $primary-color;
+		.container {
+			display: flex;
+			justify-content: space-between;
+			// padding-top: 0.5rem;
+			// padding-bottom: 0.5rem;
+		}
+
+		.logo {
+			height: 60px;
+			flex: 1 1 10%;
+			img {
+				background-color: white;
+				border-radius: 50%;
+				height: 100%;
+				// width: 100%;
+			}
+		}
+
+		.nav {
+			flex: 1 1 60%;
+			.nav-list {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				li {
+					@include flex(flex, center, center);
+					padding: 10px 30px;
+					cursor: pointer;
+					transition: all 0.3s ease;
+					&:hover,
+					&.active {
+						background-color: $primary-lite;
+					}
+				}
+			}
+		}
+
+		.menu {
+			flex: 1 1 10%;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			button {
+				height: 40px;
+				width: 40px;
+				border-radius: 50%;
+				border: 0;
+				background-color: $primary-color;
+				cursor: pointer;
+				span {
+					display: block;
+					&:not(:last-of-type) {
+						margin-bottom: 5px;
+					}
+					height: 2px;
+					width: 95%;
+					margin: auto;
+					background-color: #fff;
+				}
+			}
+		}
+	}
+
+	// Header Content
+	&__content {
+		flex: 1;
+		.lead {
+			font-size: 1.5rem;
+			text-transform: uppercase;
+			margin: 0;
+			padding: 0;
+		}
+		.primary-text {
+			text-transform: uppercase;
+			font-size: 5rem;
+			margin: 0 0 2rem 0;
+			padding: 0;
+			span {
+				display: block;
+			}
+		}
+		a {
+			background: #f4f4f4;
+			color: $primary-lite;
+			font-size: 1.2rem;
+			&:hover {
+				background-color: rgba($color: #fff, $alpha: 0.9)
+			}
+		}
+	}
+
+	// Header Media
+	&__media {
+		display: flex;
+		// height: 100px;
+		padding: 0 1rem 10px;
+		i {
+			font-size: 1.5rem;
+		}
+		.down-arrow {
+			flex: 1;
+			position: relative;
+			animation: scroll 2s infinite ease;
+		}
+		@keyframes scroll {
+			0%, 100% {
+				bottom: 10px;
+			}
+			50% {
+				bottom: 0;
+			}
+
+		}
+		.social {
+			flex:0 0 10%;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+
+			i {
+				margin-right: 5px;
+			}
+		}
+	}
+
+}

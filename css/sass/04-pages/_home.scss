@@ -37,7 +37,6 @@
 			display: flex;
 			color: #fff;
 			height: 500px;
-
 			&-info {
 				flex-basis: 50%;
 				background: linear-gradient(to left, $primary-color, $primary-lite);
@@ -65,3 +64,67 @@
 	}
 }
 // About Ends Here
+
+// email-list Starts Here
+.email-list {
+	.container {
+		height: 100%;
+	}
+	margin-top: 10rem;
+	background-color: $primary-color;
+	color: #fff;
+	padding: 1rem 0;
+	position: relative;
+	height: 250px;
+	&::before,
+	&::after {
+		content: "";
+		height: 100px;
+		width: 100%;
+		position: absolute;
+		background-color: $primary-color;
+	}
+	&::before {
+		bottom: 100%;
+		left: 0;
+		transform-origin: bottom left;
+		transform: skewY(2deg);
+	}
+	&::after {
+		top: 100%;
+		right: 0;
+		transform-origin: bottom right;
+		transform: skewY(2deg);
+	}
+	.wrapper {
+		@include flex(flex, center, center);
+		flex-direction: column;
+		position: relative;
+		height: 100%;
+
+		h2 {
+			margin-top: 0;
+			margin-bottom: 10px;
+			text-transform: uppercase;
+		}
+		p {
+			margin: 0;
+			margin-bottom: 10px;
+    }
+    form {
+      margin-top: 1rem;
+      input[type=text],
+      input[type=email] {
+        border: 0;
+        border-bottom: 1px solid #fff;
+        padding: 0.8rem 0.5rem;
+        background-color: inherit;
+        margin-left: 1rem;
+      }
+      input[type=button] {
+        margin-left: 1rem;
+      }
+    }
+	}
+}
+// email-list Ends Here

@@ -15,6 +15,7 @@ html {
 
 body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background-color: #111;
 }
 
 *, *::after, *::before {
@@ -179,8 +180,19 @@ body {
   }
 }
 
-body {
-  height: 4000px;
+.footer {
+  margin-top: 10rem;
+  background: linear-gradient(to left, #06091a, #08122b);
+  padding: 1rem;
+  color: #FFF;
+}
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .container i {
+  font-size: 1.2rem;
 }
 
 .info {
@@ -242,4 +254,66 @@ body {
 .about .container .row-img img {
   width: 100%;
   height: 100%;
+}
+
+.email-list {
+  margin-top: 10rem;
+  background-color: #06091a;
+  color: #fff;
+  padding: 1rem 0;
+  position: relative;
+  height: 250px;
+}
+.email-list .container {
+  height: 100%;
+}
+.email-list::before, .email-list::after {
+  content: "";
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  background-color: #06091a;
+}
+.email-list::before {
+  bottom: 100%;
+  left: 0;
+  transform-origin: bottom left;
+  transform: skewY(2deg);
+}
+.email-list::after {
+  top: 100%;
+  right: 0;
+  transform-origin: bottom right;
+  transform: skewY(2deg);
+}
+.email-list .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+}
+.email-list .wrapper h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.email-list .wrapper p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+.email-list .wrapper form {
+  margin-top: 1rem;
+}
+.email-list .wrapper form input[type=text],
+.email-list .wrapper form input[type=email] {
+  border: 0;
+  border-bottom: 1px solid #fff;
+  padding: 0.8rem 0.5rem;
+  background-color: inherit;
+  margin-left: 1rem;
+}
+.email-list .wrapper form input[type=button] {
+  margin-left: 1rem;
 }

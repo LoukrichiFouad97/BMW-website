@@ -1,15 +1,15 @@
 // Import Helpers
-@import 'sass/01-helpers/_variables';
-@import 'sass/01-helpers/_mixins';
+@import "sass/01-helpers/_variables";
+@import "sass/01-helpers/_mixins";
 
 // Import Global reseting
-@import 'sass/04-pages/_global';
-@import 'sass/02-components/buttons';
+@import "sass/04-pages/_global";
+@import "sass/02-components/buttons";
 
-// Import layouts 
-@import 'sass/03-layout/header';
-@import 'sass/03-layout/grid';
-@import 'sass/03-layout/footer';
+// Import layouts
+@import "sass/03-layout/header";
+@import "sass/03-layout/grid";
+@import "sass/03-layout/footer";
 
-// Import Home page 
-@import 'sass/04-pages/home';
+// Import Home page
+@import "sass/04-pages/home";

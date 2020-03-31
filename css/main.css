@@ -244,6 +244,12 @@ body {
 }
 .info .container {
   display: flex;
+  flex-flow: column wrap;
+}
+@media (min-width: 768px) {
+  .info .container {
+    flex-direction: row;
+  }
 }
 .info .container .info-1 {
   position: relative;
@@ -251,14 +257,24 @@ body {
   flex: 1;
   text-align: center;
 }
-.info .container .info-1:not(:last-of-type)::after {
-  content: "";
-  height: 30%;
-  width: 2px;
-  background-color: #fff;
-  position: absolute;
-  right: 0;
-  top: 40%;
+@media (min-width: 768px) {
+  .info .container .info-1 {
+    flex: 1 0 50%;
+  }
+}
+@media (min-width: 992px) {
+  .info .container .info-1 {
+    flex: 1 0 calc(100% / 4);
+  }
+  .info .container .info-1:not(:last-of-type)::after {
+    content: "";
+    height: 30%;
+    width: 2px;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    top: 40%;
+  }
 }
 .info .container .info-1 h3 {
   margin: 0;
@@ -270,21 +286,43 @@ body {
 .about {
   margin: 4rem 0;
 }
-.about .container .row {
+.about .container {
   display: flex;
+  flex-flow: column wrap;
+}
+.about .container .row {
   color: #fff;
-  height: 500px;
+  display: flex;
+  flex-flow: column wrap;
+}
+@media (min-width: 768px) {
+  .about .container .row {
+    flex-flow: row wrap;
+  }
 }
 .about .container .row-info {
-  flex-basis: 50%;
+  flex: 1 0 100%;
   background: linear-gradient(to left, #06091a, #08122b);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  transform: scale(1.1);
-  box-shadow: 0 0 10px #000;
+  padding: 1rem;
+  height: 300px;
+}
+.about .container .row-info:nth-of-type(2) {
+  order: -1;
+}
+@media (min-width: 768px) {
+  .about .container .row-info {
+    box-shadow: 0 0 10px #000;
+    transform: scale(1.1);
+    flex: 1 0 50%;
+  }
+  .about .container .row-info:nth-of-type(2) {
+    order: 0;
+  }
 }
 .about .container .row-info h2 {
   margin: 0;
@@ -294,7 +332,12 @@ body {
   width: 80%;
 }
 .about .container .row-img {
-  flex-basis: 50%;
+  flex: 1 0 100%;
+}
+@media (min-width: 768px) {
+  .about .container .row-img {
+    flex: 50%;
+  }
 }
 .about .container .row-img img {
   width: 100%;
@@ -358,7 +401,7 @@ body {
   padding: 0.8rem 0.5rem;
   background-color: inherit;
   margin-left: 1rem;
-  color: #FFF;
+  color: #fff;
 }
 .email-list .wrapper form input[type=button] {
   margin-left: 1rem;

@@ -95,26 +95,35 @@
 	&__content {
 		flex: 1;
 		.lead {
-			font-size: 1.5rem;
+			font-size: 1rem;
 			text-transform: uppercase;
 			margin: 0;
 			padding: 0;
+			@media #{$min-small} {
+				font-size: 1.5rem;
+			}
 		}
 		.primary-text {
 			text-transform: uppercase;
-			font-size: 5rem;
+			font-size: 3rem;
 			margin: 0 0 2rem 0;
 			padding: 0;
 			span {
 				display: block;
 			}
+			@media #{$min-small} {
+				font-size: 5rem;
+			}
 		}
 		a {
 			background: #f4f4f4;
 			color: $primary-lite;
-			font-size: 1.2rem;
+			font-size: 1rem;
 			&:hover {
 				background-color: rgba($color: #fff, $alpha: 0.9);
+			}
+			@media #{$min-small} {
+				font-size: 1.2rem;
 			}
 		}
 	}
